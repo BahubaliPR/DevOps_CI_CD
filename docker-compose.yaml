@@ -8,8 +8,8 @@ services:
       replicas: 5
     ports:
       - 85:80
-  naginx:
-    image: naginx:latest
+  nginx:
+    image: nginx:latest
     networks:
       - overlay_network
     deploy:
