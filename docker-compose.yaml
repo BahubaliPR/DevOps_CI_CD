@@ -10,7 +10,6 @@ services:
       - 85:80
   naginx:
     image: naginx:latest
-    restart: always
     networks:
       - overlay_network
     deploy:
