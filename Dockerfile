@@ -1,4 +1,4 @@
-FROM bahubalipr/ubuntu_apache2 
+FROM bahubalipr/apache2_ubuntu
 
 RUN rm /var/www/html/index.html
 
