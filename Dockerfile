@@ -1,6 +1,4 @@
-FROM ubuntu:alpine
-
-RUN apt-get install -y apache2 
+FROM bahubalipr/ubuntu_apache2 
 
 RUN rm /var/www/html/index.html
 
