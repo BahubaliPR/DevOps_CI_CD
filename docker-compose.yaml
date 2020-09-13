@@ -2,7 +2,6 @@ version: '3.7'
 services: 
   apache2: 
     image: apache2:latest
-    restart: always
     networks:
       - overlay_network
     deploy:
@@ -18,6 +17,9 @@ services:
       replicas: 5
     ports:
       - 84:80
+networks: 
+  overlay_network:
+    driver: overlay
     
       
 
