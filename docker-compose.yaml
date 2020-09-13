@@ -1,0 +1,23 @@
+version= '3.7'
+services: 
+  apache2: 
+    image: apache2:latest
+    restart: always
+    networks:
+      - overlay_network
+    deploy:
+      replicas: 5
+    ports:
+      - 85:80
+  naginx:
+    image: naginx:latest
+    restart: always
+    networks:
+      - overlay_network
+    deploy:
+      replicas: 5
+    ports:
+      - 84:80
+    
+      
+
