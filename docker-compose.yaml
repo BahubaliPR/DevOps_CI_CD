@@ -1,0 +1,24 @@
+version: '3.7'
+services: 
+  apache2: 
+    image: apache2:latest
+    networks:
+      - overlay_network
+    deploy:
+      replicas: 5
+    ports:
+      - 85:80
+  nginx:
+    image: nginx:latest
+    networks:
+      - overlay_network
+    deploy:
+      replicas: 5
+    ports:
+      - 84:80
+networks: 
+  overlay_network:
+    driver: overlay
+    
+      
+
